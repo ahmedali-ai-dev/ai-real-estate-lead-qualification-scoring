@@ -1,6 +1,9 @@
 # AI Real Estate Lead Qualification & Scoring
 
 An n8n AI automation that qualifies real-estate leads through Telegram, maintains conversation memory, calculates an internal lead score, and saves high-quality leads to Google Sheets.
+## 🔄 Workflow
+
+![AI Real Estate Lead Qualification & Scoring Workflow](workflow.png)
 
 ## Workflow
 
