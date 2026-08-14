@@ -62,10 +62,6 @@ Qualified leads are automatically saved to Google Sheets for further sales follo
 
 ---
 
-## 🔄 Workflow
-
-![AI Real Estate Lead Qualification & Scoring Workflow](workflow.png)
-
 ### Workflow Flow
 
 ```text
@@ -79,3 +75,6 @@ AI Agent
    ├── OpenRouter Chat Model
    ├── Conversation Memory
    └── Save Qualified Lead → Google Sheets
+## 🔄 Workflow
+
+![AI Real Estate Lead Qualification & Scoring Workflow](workflow.png)
