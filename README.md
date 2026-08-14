@@ -1,75 +1,81 @@
-# AI Real Estate Lead Qualification & Scoring
+# 🏠 AI Real Estate Lead Qualification & Scoring
 
-An n8n AI automation that qualifies real-estate leads through Telegram, maintains conversation memory, calculates an internal lead score, and saves high-quality leads to Google Sheets.
+AI-powered real estate lead qualification and scoring automation built with **n8n**.
+
+This workflow communicates with potential real estate customers through Telegram, collects important lead information using an AI Agent, maintains conversation memory, qualifies prospects, calculates a lead score, and saves qualified leads to Google Sheets.
+
+---
+
+## 🎯 Project Overview
+
+The goal of this automation is to help real estate businesses automatically qualify incoming leads before they reach the sales team.
+
+Instead of manually asking every customer the same questions and organizing their information, the AI Agent handles the conversation, collects the required information, evaluates the lead, and stores qualified prospects automatically.
+
+---
+
+## ⚙️ Key Features
+
+- 💬 AI-powered Telegram conversations
+- 🤖 Real Estate AI Agent
+- 🧠 Conversation Memory
+- 📋 Automatic lead information collection
+- 🎯 Lead qualification
+- 📊 Lead scoring
+- 📑 Qualified lead storage in Google Sheets
+- 🔄 Automated Telegram replies
+- 🌍 Supports natural customer conversations
+
+---
+
+## 🧠 Lead Qualification
+
+The AI Agent collects and evaluates important information such as:
+
+- Customer name
+- Email
+- Phone number
+- Property type
+- Transaction type
+- Property status
+- Budget
+- Purchase timeline
+- Payment method
+- Whether the customer is the decision maker
+- Previous real estate purchase experience
+
+The collected information is then used to evaluate the quality of the lead.
+
+---
+
+## 📊 Lead Scoring
+
+The workflow assigns an internal lead score based on the information collected during the conversation.
+
+Leads are classified according to their qualification level:
+
+- 🟢 **High-quality leads**
+- 🟡 **Medium-quality leads**
+- 🔴 **Low-quality leads**
+
+Qualified leads are automatically saved to Google Sheets for further sales follow-up.
+
+---
+
 ## 🔄 Workflow
 
 ![AI Real Estate Lead Qualification & Scoring Workflow](workflow.png)
 
-## Workflow
+### Workflow Flow
 
+```text
 Telegram Trigger
-→ Real Estate AI Agent
-→ Telegram Reply
+       ↓
+Real Estate AI Agent
+       ↓
+Telegram Reply
 
-The AI Agent uses:
-- OpenRouter Chat Model
-- Conversation Memory
-- Google Sheets Tool: Save Qualified Lead
-
-## What it does
-
-1. Receives a customer message through Telegram.
-2. Conducts a natural conversation in the customer's language.
-3. Collects real-estate lead information such as:
-   - Name
-   - Email
-   - Phone
-   - Property type
-   - Transaction type
-   - Property status
-   - First purchase
-   - Timeline
-   - Budget
-   - Decision maker
-   - Previous purchase
-   - Payment method
-4. Asks the customer to confirm the collected information.
-5. Calculates an internal score from 0–100.
-6. Classifies the lead as High, Medium, or Low.
-7. For a score of 80+, calls the Google Sheets tool and stores the qualified lead.
-8. Replies to the customer through Telegram.
-
-## Technologies
-
-- n8n
-- Telegram
-- OpenRouter
-- AI Agent
-- Conversation Memory
-- Google Sheets
-
-## Import
-
-1. Download the JSON workflow.
-2. Open your n8n workspace.
-3. Import the workflow JSON.
-4. Create/select your own credentials for:
-   - Telegram
-   - OpenRouter
-   - Google Sheets
-5. Select your own Google Sheet.
-6. Review the AI Agent prompt and scoring rules.
-7. Test the workflow before activating it.
-
-## Important
-
-This repository contains a sanitized workflow export for portfolio/learning purposes.
-
-Do not publish:
-- Telegram bot tokens
-- OpenRouter API keys
-- Google OAuth tokens
-- Private spreadsheet data
-- Private customer data
-
-The workflow JSON in this repository has account-specific credentials and identifiers removed/replaced.
+AI Agent
+   ├── OpenRouter Chat Model
+   ├── Conversation Memory
+   └── Save Qualified Lead → Google Sheets
